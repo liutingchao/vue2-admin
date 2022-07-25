@@ -40,22 +40,9 @@ const routes = [
 ]
 
 const router = new VueRouter({
-	mode: 'history',
+	mode: 'hash',
 	base: process.env.BASE_URL,
 	routes
 })
-
-
-router.onError(error => {
-	console.log("+++++++++++++++++++++");
-	console.log(error);
-	location.reload();
-    /*const pattern = /Loading chunk (\d)+ failed/g;
-    const isChunkLoadFailed = error.match(pattern);
-    console.log(isChunkLoadFailed);
-    if(isChunkLoadFailed){
-        location.reload();
-    }*/
-});
 
 export default router
